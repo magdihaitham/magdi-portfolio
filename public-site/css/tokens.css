@@ -1,0 +1,80 @@
+/* =========================================================
+   MAGDI HAITHAM MABROK — DESIGN TOKENS
+   Hybrid Editorial Magazine × Modern Marketing Portfolio
+   ========================================================= */
+
+:root {
+  /* Fonts */
+  --font-display: 'Cormorant Garamond', 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-arabic: 'IBM Plex Sans Arabic', 'Segoe UI', Tahoma, Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* Editorial Noir (Default Dark Theme) */
+  --bg-canvas: #0f1215;
+  --bg-surface: #161a1f;
+  --bg-elevated: #1e242b;
+  --bg-inset: #121519;
+  --bg-paper: #f3ede2;
+  --ink-on-paper: #16181a;
+
+  --ink-primary: #f2ece1;
+  --ink-secondary: #b5afa4;
+  --ink-muted: #848078;
+
+  /* Burnished Editorial Brass */
+  --accent: #c99e3f;
+  --accent-hover: #dfb557;
+  --accent-soft: rgba(201, 158, 63, 0.14);
+  --accent-ink: #111315;
+
+  /* Hairline Rules & Borders */
+  --border-hairline: rgba(242, 236, 225, 0.14);
+  --border-strong: rgba(242, 236, 225, 0.28);
+  --shadow-editorial: 0 24px 60px rgba(0, 0, 0, 0.48);
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.28);
+
+  /* Brand Identity Tokens (Preserved Strictly) */
+  --brand-kanan: #127f54;
+  --brand-kanan-gold: #c7a027;
+  --brand-divan: #0033a0;
+  --brand-divan-gold: #c7931b;
+  --brand-aibe: #320762;
+  --brand-aibe-light: #ffffff;
+
+  /* Status Colors */
+  --status-verified: #2ea06c;
+  --status-pending: #d69c2f;
+  --status-internal: #cf5b5b;
+
+  /* Scale & Radii */
+  --radius-xs: 3px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --max-width: 1240px;
+  --font-scale: 1;
+}
+
+[data-theme="light"] {
+  --bg-canvas: #f5f0e6;
+  --bg-surface: #fffdf8;
+  --bg-elevated: #efe8da;
+  --bg-inset: #ebe2d2;
+  --bg-paper: #171a1e;
+  --ink-on-paper: #f2ece1;
+
+  --ink-primary: #14171a;
+  --ink-secondary: #50565e;
+  --ink-muted: #6e747c;
+
+  --accent: #9a721e;
+  --accent-hover: #b38626;
+  --accent-soft: rgba(154, 114, 30, 0.12);
+  --accent-ink: #ffffff;
+
+  --border-hairline: rgba(20, 23, 26, 0.14);
+  --border-strong: rgba(20, 23, 26, 0.28);
+  --shadow-editorial: 0 24px 54px rgba(20, 23, 26, 0.12);
+  --shadow-card: 0 8px 24px rgba(20, 23, 26, 0.07);
+}

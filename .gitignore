@@ -1,0 +1,15 @@
+# Never commit local Admin Studio, backups, private source docs, or secrets
+admin-local/
+backups/
+documentation/
+*.bat
+*.sh
+*.zip
+*.env
+.env*
+*Private*
+*private*
+master-portfolio-data.js
+.DS_Store
+Thumbs.db
+node_modules/
