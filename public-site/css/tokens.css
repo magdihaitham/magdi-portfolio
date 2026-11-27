@@ -11,10 +11,10 @@
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
   /* Editorial Noir (Default Dark Theme) */
-  --bg-canvas: #0f1215;
-  --bg-surface: #161a1f;
-  --bg-elevated: #1e242b;
-  --bg-inset: #121519;
+  --bg-canvas: #050506;
+  --bg-surface: #0e0e10;
+  --bg-elevated: #161618;
+  --bg-inset: #08080a;
   --bg-paper: #f3ede2;
   --ink-on-paper: #16181a;
 
@@ -29,8 +29,8 @@
   --accent-ink: #111315;
 
   /* Hairline Rules & Borders */
-  --border-hairline: rgba(242, 236, 225, 0.14);
-  --border-strong: rgba(242, 236, 225, 0.28);
+  --border-hairline: rgba(201, 158, 63, 0.20);
+  --border-strong: rgba(201, 158, 63, 0.38);
   --shadow-editorial: 0 24px 60px rgba(0, 0, 0, 0.48);
   --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.28);
 

@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Magdi Haitham Mabrok — Content Creator &amp; Social Media Specialist</title>
-  <meta name="description" content="Editorial marketing portfolio of Magdi Haitham Mabrok featuring B2B hospitality, wholesale gift packaging, student leadership case studies, bilingual scripts, market research, and presentation decks." />
+  <title>Magdi Haitham | Content Creator &amp; Social Media Specialist</title>
+  <meta name="description" content="Campaign ideas, scripts and social content for hospitality, gifting and youth brands, in Arabic and English. Portfolio of Magdi Haitham, Cairo." />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Magdi Haitham Mabrok — Content Creator &amp; Social Media Specialist" />
-  <meta property="og:description" content="Case studies, Arabic/English scripts, video archive, market research, and strategic presentations." />
+  <meta property="og:title" content="Magdi Haitham | Content Creator &amp; Social Media Specialist" />
+  <meta property="og:description" content="Campaign ideas, scripts and social content for hospitality, gifting and youth brands." />
   <meta property="og:image" content="./assets/profile/magdi-profile.webp" />
   <meta name="twitter:card" content="summary_large_image" />
 
@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="./css/tokens.css" />
   <link rel="stylesheet" href="./css/main.css" />
   <link rel="stylesheet" href="./css/theme-overrides.css" />
+  <link rel="stylesheet" href="./css/v4.css" />
   <style id="builder-dynamic-css"></style>
 </head>
 <body>
@@ -44,7 +45,7 @@
 
       <div class="nav-actions">
         <button type="button" class="btn btn-sm" id="theme-toggle-btn" aria-pressed="false">Light Mode</button>
-        <button type="button" class="btn btn-sm mobile-menu-toggle" id="mobile-menu-toggle" aria-expanded="false" aria-controls="public-nav-links" aria-label="Toggle navigation menu">Menu</button>
+        <button type="button" class="btn btn-sm mobile-menu-toggle v4-burger" id="mobile-menu-toggle" aria-expanded="false" aria-controls="public-nav-links" aria-label="Open navigation"><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><g stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path class="b1" d="M3 6h14"/><path class="b2" d="M3 10h14"/><path class="b3" d="M3 14h14"/></g></svg></button>
       </div>
     </div>
   </header>
@@ -130,13 +131,26 @@
     </div>
   </div>
 
+  <!-- VIDEO PLAYER MODAL -->
+  <div class="modal-backdrop" id="video-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="video-modal-title">
+    <div class="modal-dialog v4-video-dialog">
+      <div class="modal-head">
+        <div>
+          <div id="video-modal-meta" class="v4-chip"></div>
+          <h3 id="video-modal-title" style="margin:0.3rem 0 0; font-size:1.1rem;"></h3>
+        </div>
+        <button type="button" class="btn btn-sm" id="video-modal-close" aria-label="Close video">Close ✕</button>
+      </div>
+      <div class="modal-body"><video id="video-modal-el" controls playsinline preload="metadata"></video><div id="video-modal-msg" class="v4-video-msg" role="alert" hidden></div></div>
+    </div>
+  </div>
+
   <div class="toast-notice" id="toast-notice" role="status" aria-live="polite"></div>
 
   <script src="./data/portfolio-data.js"></script>
   <script src="./js/state.js"></script>
   <script src="./js/builder-style-engine.js"></script>
   <script src="./js/motion.js"></script>
-  <script src="./js/carousels-modals.js"></script>
   <script src="./js/render-public.js"></script>
   <script src="./js/app.js"></script>
 </body>

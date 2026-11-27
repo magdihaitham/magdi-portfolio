@@ -9,7 +9,7 @@
 
     applyTheme(forceFromData = false) {
       const savedMode = !forceFromData ? localStorage.getItem(THEME_KEY) : null;
-      const mode = savedMode || this.data.theme?.mode || 'dark';
+      const mode = forceFromData ? (this.data.theme?.mode || 'dark') : (savedMode || 'dark'); /* first visit is always dark */
       document.documentElement.setAttribute('data-theme', mode);
 
       const scale = Number(this.data.theme?.fontScale || 1);
@@ -59,7 +59,7 @@
     menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
   navLinks?.addEventListener('click', (e) => {
-    if (e.target.tagName === 'A') {
+    if (e.target.closest && e.target.closest('a')) {
       navLinks.classList.remove('open');
       menuBtn?.setAttribute('aria-expanded', 'false');
     }
