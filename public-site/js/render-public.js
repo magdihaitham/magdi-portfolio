@@ -525,12 +525,15 @@ window.PublicRenderer = (function () {
     r.addEventListener('mouseover', e => { const tp = e.target.closest('.sr-tape'); if (tp) pullShow(tp); });
     r.addEventListener('mouseout', e => { if (e.target.closest('.sr-tape') && !(e.relatedTarget && e.relatedTarget.closest && e.relatedTarget.closest('.sr-tape'))) pullHide(); });
     r.addEventListener('focusin', e => { const tp = e.target.closest('.sr-tape'); if (tp) pullShow(tp); });
-    r.addEventListener('focusout', e => { if (e.target.closest('.sr-tape')) pullHide(); });
+    r.addEventListener('focusout', e => { if (e.target.closest('.sr-tape') && !(window.matchMedia && window.matchMedia('(hover: none)').matches)) pullHide(); });
     r.addEventListener('click', e => {
       const smi = e.target.closest('.sm-it'); if (smi) return srMenuPick(smi);
       const rem = e.target.closest('.sr-remote');
       if (rem && !rem.classList.contains('open') && window.matchMedia && window.matchMedia('(hover: none)').matches) { rem.classList.add('open'); return; }
-      const tp = e.target.closest('.sr-tape'); if (tp) { if (tp.classList.contains('out')) return; pullHide(); return srInsert(tp.dataset.tape); }
+      const tp = e.target.closest('.sr-tape'); if (tp) { if (tp.classList.contains('out')) return;
+        if (window.matchMedia && window.matchMedia('(hover: none)').matches && !tp.classList.contains('sel')) { r.querySelectorAll('.sr-tape.sel').forEach(x => x.classList.remove('sel')); tp.classList.add('sel'); pullShow(tp); return; }
+        r.querySelectorAll('.sr-tape.sel').forEach(x => x.classList.remove('sel')); pullHide(); return srInsert(tp.dataset.tape); }
+      if (!e.target.closest('.sr-remote') && !e.target.closest('.sm-it')) { r.querySelectorAll('.sr-tape.sel').forEach(x => x.classList.remove('sel')); if (window.matchMedia && window.matchMedia('(hover: none)').matches) pullHide(); }
       const b = e.target.closest('[data-sr]'); if (b) return srAct(b.dataset.sr);
       if (e.target.closest('.sr-vid')) srAct('play');
     });

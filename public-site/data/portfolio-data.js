@@ -1,6 +1,6 @@
 window.DEFAULT_PORTFOLIO_DATA = {
   "meta": {
-    "version": "4.20",
+    "version": "4.21",
     "lastUpdated": "2026-11-27",
     "seo": {
       "title": "Magdi Haitham | Content Creator & Social Media Specialist",
